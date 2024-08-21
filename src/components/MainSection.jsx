@@ -9,10 +9,11 @@ export default function MainSection() {
   return (
     <div>
         <button id="toggleOpen" onClick={handleClick}>
-        Open Menu
+        __ <br/>
+        __
       </button>
       <button id="toggleClose" onClick={handleClick}>
-        Close Menu
+        
       </button>
     <div
       className="relative lg:min-h-full 2xl:min-h-[730px] before:absolute before:inset-0 before:w-full  before:opacity-60"
