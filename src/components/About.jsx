@@ -2,12 +2,12 @@ import React from 'react'
 
 export default function About() {
   return (
-    <div class="mt-32 max-w-7xl mx-auto">
+    <div class="mt-32 max-w-full mx-3 font-serif">
       <div class="mb-16 max-w-2xl text-center mx-auto">
         <h1 class="md:text-4xl text-3xl font-sans md:!leading-[50px] mb-6 text-lime-500">About Me</h1>
         <h3 class="md:text-3xl text-3xl font-serif md:!leading-[40px] mb-6 text-black">Mihretu Endeshaw</h3>
       </div>
-      <div className='mx-auto max-w-6xl d-flex rounded-2xl shadow align-items-center justify-content-center'>
+      <div className='mx-auto max-w-7xl d-flex rounded-2xl shadow align-items-center justify-content-center'>
         <p className='text-black md:text-2xl py-8 px-7'>
             Hi, my name is Mihretu Endeshaw. I am a seasoned software engineer with a strong passion for building scalable, efficient, and high-performance systems. 
             With expertise in the MERN stack (MongoDB, Express.js, React, Node.js), 
