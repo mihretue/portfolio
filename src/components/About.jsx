@@ -8,7 +8,7 @@ export default function About() {
         <h3 class="md:text-3xl text-3xl font-serif md:!leading-[40px] mb-6 text-black">Mihretu Endeshaw</h3>
       </div>
       <div className='mx-auto max-w-7xl d-flex rounded-2xl shadow align-items-center justify-content-center'>
-        <p className='text-black md:text-2xl py-8 px-7'>
+        <p className='text-green-600 md:text-2xl py-8 px-7'>
             Hi, my name is Mihretu Endeshaw. I am a seasoned software engineer with a strong passion for building scalable, efficient, and high-performance systems. 
             With expertise in the MERN stack (MongoDB, Express.js, React, Node.js), 
             I specialize in developing full-stack web applications that are both robust and user-friendly. 

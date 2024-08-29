@@ -20,31 +20,31 @@ export default function Expertise() {
           <div class="text-center bg-white px-6 py-8 rounded-2xl shadow">
             <img src={UI} className='w-12 mb-6 inline-block rounded-xl' />
             <h3 class="text-xl mb-4 text-black">Frontend Development</h3>
-            <p class="text-orange-500">I specialize in crafting visually stunning and highly responsive web applications using the latest frontend technologies. With expertise in HTML, CSS, React, and Tailwind CSS, I transform Figma designs into seamless digital experiences that work flawlessly across all devices.</p>
+            <p class="text-green-500 font-serif">I specialize in crafting visually stunning and highly responsive web applications using the latest frontend technologies. With expertise in HTML, CSS, React, and Tailwind CSS, I transform Figma designs into seamless digital experiences that work flawlessly across all devices.</p>
             <a href="javascript:void(0);" class="text-blue-600 inline-block mt-4 hover:underline">Learn more</a>
           </div>
           <div class="text-center bg-white px-6 py-8 rounded-2xl shadow">
             <img src={Software} className='w-12 mb-6 inline-block  rounded-xl'/>
             <h3 class="text-xl text-black mb-4">Full Stack Development</h3>
-            <p class="text-orange-500">As a skilled full-stack developer, I build dynamic web applications from the ground up. Leveraging my knowledge of the MERN stack (MongoDB, Express.js, React, Node.js) and Django, I deliver robust and scalable solutions tailored to your business needs.</p>
+            <p class="text-green-500 font-serif">As a skilled full-stack developer, I build dynamic web applications from the ground up. Leveraging my knowledge of the MERN stack (MongoDB, Express.js, React, Node.js) and Django, I deliver robust and scalable solutions tailored to your business needs.</p>
             <a href="javascript:void(0);" class="text-blue-600 inline-block mt-4 hover:underline">Learn more</a>
           </div>
           <div class="text-center bg-white px-6 py-8 rounded-2xl shadow">
             <img src={Api} className='w-12 mb-6 inline-block  rounded-xl' />
             <h3 class="text-xl mb-4 text-black">API Integration</h3>
-            <p class="text-orange-500">I integrate third-party APIs to extend the functionality of your web applications, from payment gateways to cloud storage solutions. My experience includes working with REST APIs and Data Insights API, ensuring smooth and reliable performance.</p>
+            <p class="text-green-500 font-serif">I integrate third-party APIs to extend the functionality of your web applications, from payment gateways to cloud storage solutions. My experience includes working with REST APIs and Data Insights API, ensuring smooth and reliable performance.</p>
             <a href="javascript:void(0);" class="text-blue-600 inline-block mt-4 hover:underline">Learn more</a>
           </div>
           <div class="text-center bg-white px-6 py-8 rounded-2xl shadow">
             <img src={Sharepoint} className='w-12 mb-6 inline-block rounded-xl' />
             <h3 class="text-xl mb-4 text-black">SharePoint Solutions</h3>
-            <p class="text-orange-500">With hands-on experience in SharePoint, I design and maintain efficient intranet sites for organizations, including government projects. My services include custom SharePoint site design, InfoPath form creation, and seamless integration with existing systems.</p>
+            <p class="text-green-500 font-serif">With hands-on experience in SharePoint, I design and maintain efficient intranet sites for organizations, including government projects. My services include custom SharePoint site design, InfoPath form creation, and seamless integration with existing systems.</p>
             <a href="javascript:void(0);" class="text-blue-600 inline-block mt-4 hover:underline">Learn more</a>
           </div>
           <div class="text-center bg-white px-6 py-8 rounded-2xl shadow">
             <img src={DataAnalysis} className='w-12 mb-6 inline-block  rounded-xl' />
             <h3 class="text-xl mb-4 text-black">Data Analysis</h3>
-            <p class="text-orange-500">Combining my expertise in Python with advanced data analysis techniques, I provide insights that drive informed decision-making. Whether you need data scraping, processing, or visualization, I deliver actionable results to support your business goals.</p>
+            <p class="text-green-500 font-serif">Combining my expertise in Python with advanced data analysis techniques, I provide insights that drive informed decision-making. Whether you need data scraping, processing, or visualization, I deliver actionable results to support your business goals.</p>
             <a href="javascript:void(0);" class="text-blue-600 inline-block mt-4 hover:underline">Learn more</a>
           </div>
         </div>

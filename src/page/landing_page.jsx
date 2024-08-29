@@ -4,11 +4,14 @@ import About from "../components/About";
 import Expertise from "../components/Expertise";
 import SkillSet from "../components/SkillSet";
 import Projects from "../components/Projects";
+import Contact from "../components/Contact";
+import NavBar from "../components/NavBar";
 const LandinPage = ()=>{
 
   return (
 
   <div class=" text-gray-100 text-[15px]">
+    <NavBar/>
     <MainSection/>
     <About/>
     <div class="px-4 sm:px-10">
@@ -132,6 +135,7 @@ const LandinPage = ()=>{
           </div>
         </div>
       </div>
+      <Contact/>
     </div>
       
   </div>
