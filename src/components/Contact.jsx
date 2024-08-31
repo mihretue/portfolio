@@ -8,9 +8,8 @@ export default function Contact() {
     e.preventDefault();
 
     emailjs
-    .sendForm('service_8qlkrnt','template_k65h2qr', form.current,{
-      publicKey: 'sn3GYofpteqCCuNtl'
-    })
+    .sendForm('service_8qlkrnt','template_k65h2qr', form.current,'1rMUjiTsdPJZ4tleB'
+    )
     .then(()=>{
       console.log('Email sent')
     },
@@ -29,17 +28,17 @@ export default function Contact() {
       <div class="space-y-4">
         <div class="flex flex-col space-y-1">
           <label class="text-orange-400 font-semibold">Name</label>
-          <input type="text" name="name" className="border border-blue-500 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-500 transition duration-300 ease-in-out" />
+          <input type="text" name="name" onChange={(e)=> e.target.value} className="border border-blue-500 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-500 transition duration-300 ease-in-out" />
         </div>
 
         <div class="flex flex-col space-y-1">
           <label class="text-gray-700 font-semibold">Email</label>
-          <input type="email" name="email" className="border border-blue-500 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-500 transition duration-300 ease-in-out" />
+          <input type="email" onChange={(e)=> e.target.value} name="email" className="border border-blue-500 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-500 transition duration-300 ease-in-out" />
         </div>
 
         <div class="flex flex-col space-y-1">
           <label class="text-gray-700 font-semibold">Message</label>
-          <textarea name="message" className="border border-blue-500 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-500 transition duration-300 ease-in-out" rows="4"></textarea>
+          <textarea name="message" onChange={(e)=>e.target.value} className="border border-blue-500 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-500 transition duration-300 ease-in-out" rows="4"></textarea>
         </div>
         <button type="submit" className=' border border-blue-500 text-black font-bold  py-1 px-3 bg-green-400 rounded'>Send</button>
   </div>
