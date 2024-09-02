@@ -1,7 +1,9 @@
 import React from 'react'
+import { Element } from 'react-scroll'
 
 export default function About() {
   return (
+    <Element name='about' className='section'>
     <div class="mt-32 max-w-full mx-3 font-serif">
       <div class="mb-16 max-w-2xl text-center mx-auto">
         <h1 class="md:text-4xl text-3xl font-sans md:!leading-[50px] mb-6 text-lime-500">About Me</h1>
@@ -19,5 +21,6 @@ export default function About() {
         </p>
       </div>
     </div>
+    </Element>
   )
 }

@@ -1,7 +1,7 @@
 import React, {useRef} from 'react'
 import emailjs from 'emailjs-com'
 import styled from 'styled-components'
-
+import { Element } from 'react-scroll'
 const Bubble = styled.div`
   position: relative;
   width: 100%;
@@ -47,6 +47,7 @@ export default function Contact() {
 )
   }
   return (
+    <Element name='contact' className='section'> 
     <Bubble className='mt-52 py-14 max-w-7xl mx-auto font-serif md:hidden lg:block'>
        <div class="mb-16 max-w-2xl text-center mx-auto">
           <h2 class="md:text-4xl text-3xl font-semibold font-serif md:!leading-[50px] mb-6 text-green-500">Thank you for reaching out!</h2>
@@ -72,5 +73,6 @@ export default function Contact() {
   </div>
     </form>
     </Bubble>
+    </Element>
   )
 }

@@ -9,6 +9,7 @@ import HtmlIcon from '../Image/svg/html5-svgrepo-com.svg'
 import CssIcon from '../Image/svg/css-svgrepo-com.svg'
 import DjagnoIcon from '../Image/svg/django-svgrepo-com.svg'
 import MongoIcon from '../Image/svg/mongo-svgrepo-com.svg'
+import { Element } from 'react-scroll'
 
 const ImageFile = [
     { id: 1, name: 'bootstrap', icon: BootstrapIcon },
@@ -25,6 +26,7 @@ const ImageFile = [
 
 export default function SkillSet() {
   return (
+    <Element name="skill">
     <div className='mt-32 max-w-8xl  mx-auto flex flex-col items-center'>
         <div class="mb-16 max-w-2xl text-center mx-auto">
             <h2 class="md:text-4xl text-3xl font-semibold text-lime-500 font-serif md:!leading-[50px] mb-6">
@@ -49,5 +51,6 @@ export default function SkillSet() {
 }
     </div>
     </div>
+    </Element>
   )
 }

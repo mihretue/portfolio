@@ -7,9 +7,10 @@ import Sharepoint from '../Image/svg/ms-sharepoint-svgrepo-com.svg'
 import UI from '../Image/svg/ui-states-svgrepo-com.svg'
 import Selenium from '../Image/svg/selenium-svgrepo-com.svg'
 import Software from "../Image/svg/software-svgrepo-com.svg"
-
+import { Element } from 'react-scroll'
 export default function Expertise() {
   return (
+    <Element name='services' className='section'>
     <div>
       <div class="mt-32 max-w-7xl mx-auto">
         <div class="mb-16 max-w-2xl text-center mx-auto">
@@ -50,5 +51,6 @@ export default function Expertise() {
         </div>
       </div>
     </div>
+    </Element>
   )
 }

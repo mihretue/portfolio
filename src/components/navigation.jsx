@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-scroll'
 export default function NavBar() {
     const [isMenuOpen, setIsMenuOpen] =useState(false)
 
@@ -25,32 +25,38 @@ export default function NavBar() {
                 </button>
         
                 <ul 
-                class='lg:flex lg:ml-14 lg:gap-x-5 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50 '>
+                class='lg:flex lg:ml-14 lg:gap-x-5  max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50 '>
                 <li class='mb-6 hidden max-lg:block ' >
                     <Link to="javascript:void(0)"><img src="https://readymadeui.com/readymadeui.svg" alt="logo" class='w-36' />
                     </Link>
                 </li>
                 <li class='max-lg:border-b max-lg:py-3 px-3'>
-                    <Link to='javascript:void(0)'
-                    class='lg:hover:text-[#007bff] text-[#007bff] block font-semibold text-[15px]'>Home</Link>
+                    <Link to='home' smooth={true} duration={500}
+                    class='lg:hover:text-[#007bff] text-xl text-decoration-none text-green-500 block font-semibold text-[15px]'>Home</Link>
                 </li>
-                <li class='max-lg:border-b max-lg:py-3 px-3'><Link to='javascript:void(0)'
-                    class='lg:hover:text-[#007bff] text-gray-500 block font-semibold text-[15px]'>About</Link>
+                <li class='max-lg:border-b max-lg:py-3 px-3'>
+                    <Link to='about' smooth={true} duration={500}
+                    class='lg:hover:text-[#007bff] text-xl text-decoration-none text-green-500 block font-semibold text-[15px]'>About</Link>
                 </li>
-                <li class='max-lg:border-b max-lg:py-3 px-3'><Link to='javascript:void(0)'
-                    class='lg:hover:text-[#007bff] text-gray-500 block font-semibold text-[15px]'>Services</Link>
+                <li class='max-lg:border-b max-lg:py-3 px-3'>
+                    <Link to='services' smooth={true} duration={500}
+                    class='lg:hover:text-[#007bff] text-xl text-decoration-none text-green-500 block font-semibold text-[15px]'>Services</Link>
                 </li>
-                <li class='max-lg:border-b max-lg:py-3 px-3'><Link to='javascript:void(0)'
-                    class='lg:hover:text-[#007bff] text-gray-500 block font-semibold text-[15px]'>Skill</Link>
+                <li class='max-lg:border-b max-lg:py-3 px-3'>
+                    <Link to='services' smooth={true} duration={500}
+                    class='lg:hover:text-[#007bff] text-xl text-decoration-none text-green-500 block font-semibold text-[15px]'>Skill</Link>
                 </li>
-                <li class='max-lg:border-b max-lg:py-3 px-3'><Link to='javascript:void(0)'
-                    class='lg:hover:text-[#007bff] text-gray-500 block font-semibold text-[15px]'>Project</Link>
+                <li class='max-lg:border-b max-lg:py-3 px-3'>
+                    <Link to='project' smooth={true} duration={500}
+                    class='lg:hover:text-[#007bff] text-xl text-decoration-none text-green-500 block font-semibold text-[15px]'>Project</Link>
                 </li>
-                <li class='max-lg:border-b max-lg:py-3 px-3'><Link to='javascript:void(0)'
-                    class='lg:hover:text-[#007bff] text-gray-500 block font-semibold text-[15px]'>Testimonies</Link>
+                <li class='max-lg:border-b max-lg:py-3 px-3'>
+                    <Link to='testimony' smooth={true} duration={500}
+                    class='lg:hover:text-[#007bff] text-xl text-decoration-none text-green-500 block font-semibold text-[15px]'>Testimonies</Link>
                 </li>
-                <li class='max-lg:border-b max-lg:py-3 px-3'><Link to='javascript:void(0)'
-                    class='lg:hover:text-[#007bff] text-gray-500 block font-semibold text-[15px]'>Contact US</Link>
+                <li class='max-lg:border-b max-lg:py-3 px-3'>
+                    <Link to='contact' smooth={true} duration={500}
+                    class='lg:hover:text-[#007bff] text-xl text-decoration-none text-green-500 block font-semibold text-[15px]'>Contact US</Link>
                 </li>
                 </ul>
             </div>

@@ -4,9 +4,10 @@ import WebScrap from '../Image/svg/selenium-svgrepo-com.svg'
 import Commerce from '../Image/svg/commerce-and-shopping-ecommerce-svgrepo-com.svg'
 import Gitt from '../Image/svg/github-svgrepo-com.svg'
 import { Link } from 'react-router-dom'
-
+import { Element } from 'react-scroll'
 export default function Projects() {
   return (
+    <Element name='project' className='section'>
     <div>
         <div class="mt-32 rounded-md px-4 py-12">
         <div class="grid md:grid-cols-2 justify-center items-center gap-12 max-w-7xl mx-auto">
@@ -57,5 +58,6 @@ export default function Projects() {
         </div>
       </div>
     </div>
+    </Element>
   )
 }
