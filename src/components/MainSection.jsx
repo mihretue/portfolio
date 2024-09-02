@@ -12,8 +12,8 @@ export default function MainSection() {
     <Element name='home' className='section'>
     <div>
     <div
-      className="relative lg:min-h-full 2xl:min-h-[730px] before:absolute before:inset-0 before:w-full  before:opacity-60"
-      style={{ backgroundImage: `url(${BackgroundImage})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', height: '85rem', width:'100%'}}
+      className="relative lg:min-h-full 2xl:min-h-[730px] before:absolute before:inset-0 before:w-full  before:opacity-60 "
+      style={{ backgroundImage: `url(${BackgroundImage})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', height: '85rem', width:'117rem'}}
     >
       <header className="py-4 px-4 sm:px-10 z-50 min-h-[70px] relative">
         <div className="lg:flex lg:items-center gap-x-2 relative">
