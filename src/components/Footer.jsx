@@ -11,7 +11,7 @@ export default function Footer() {
       <hr className=" my-12" />
       <div className="grid max-sm:grid-cols-1 max-lg:grid-cols-2 lg:grid-cols-4 gap-8 d-flex justify-center align-items-center ">
         <div>
-          <h4 className="text-lg mb-6">Mihretu Endeshaw</h4>
+          <h4 className="text-lg mb-4">Mihretu Endeshaw</h4>
           <p className="text-green-400 mb-2 text-lg">
             mihretuendeshaw84@gmail.com
           </p>
