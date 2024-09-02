@@ -50,10 +50,10 @@ export default function NavBar() {
                     <Link to='project' smooth={true} duration={500}
                     class='lg:hover:text-[#007bff] text-xl text-decoration-none text-green-500 block font-semibold text-[15px]'>Project</Link>
                 </li>
-                <li class='max-lg:border-b max-lg:py-3 px-3'>
+                {/* <li class='max-lg:border-b max-lg:py-3 px-3'>
                     <Link to='testimony' smooth={true} duration={500}
                     class='lg:hover:text-[#007bff] text-xl text-decoration-none text-green-500 block font-semibold text-[15px]'>Testimonies</Link>
-                </li>
+                </li> */}
                 <li class='max-lg:border-b max-lg:py-3 px-3'>
                     <Link to='contact' smooth={true} duration={500}
                     class='lg:hover:text-[#007bff] text-xl text-decoration-none text-green-500 block font-semibold text-[15px]'>Contact US</Link>

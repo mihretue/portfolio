@@ -5,8 +5,10 @@ import Expertise from "../components/Expertise";
 import SkillSet from "../components/SkillSet";
 import Projects from "../components/Projects";
 import Contact from "../components/Contact";
-import Testimony from "../components/Testimony";
+// import Testimony from "../components/Testimony";
 import NavBar from "../components/navigation";
+
+
 const LandinPage = ()=>{
 
   return (
@@ -19,7 +21,6 @@ const LandinPage = ()=>{
       <Expertise/>
       <SkillSet/>
       <Projects/>
-      <Testimony/>
       <Contact/>
     </div>
       
