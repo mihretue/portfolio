@@ -1,0 +1,72 @@
+MIHRETU ENDESHAW
+Full Stack Developer & Software Engineer
+
+CONTACT INFORMATION
+Email: mihretuendeshaw84@gmail.com
+GitHub: https://github.com/mihretue
+LinkedIn: https://linkedin.com/in/mihretue
+Portfolio: [Your Portfolio URL]
+
+PROFESSIONAL SUMMARY
+Seasoned software engineer with a strong passion for building scalable, efficient, and high-performance systems. Expertise in the MERN stack (MongoDB, Express.js, React, Node.js) specializing in developing full-stack web applications that are both robust and user-friendly. Extensive experience in Python for data analysis, automation, and backend development. Committed to continuous learning and thriving on tackling challenging projects that push the boundaries of technology.
+
+TECHNICAL SKILLS
+Frontend Development:
+- HTML5, CSS3, JavaScript (ES6+)
+- React.js, Tailwind CSS, Bootstrap
+- Responsive Web Design, UI/UX Implementation
+
+Backend Development:
+- Node.js, Express.js
+- Django, Python
+- RESTful APIs, API Integration
+
+Database:
+- MongoDB
+- SQL Databases
+
+Tools & Technologies:
+- Git & GitHub
+- SharePoint Development
+- Data Analysis & Visualization
+- Web Scraping (Selenium)
+
+PROJECTS
+
+E-Commerce Web Application
+- Built a feature-rich e-commerce platform using the MERN stack
+- Implemented dynamic product management and secure payment integration
+- Created responsive user interface ensuring smooth experience across all devices
+- Technologies: MongoDB, Express.js, React, Node.js
+
+Bank Exchange Rate Aggregator
+- Developed Django-React web application for real-time exchange rate information
+- Implemented web scraping to gather data from various banks
+- Created intuitive interface for comparing currency rates across institutions
+- Technologies: Django, React, Python, Web Scraping
+
+Bid Management System for Public Procurement Agency
+- Built comprehensive bid management system using MERN stack
+- Streamlined bidding process for efficient submission and review
+- Designed user-friendly interface for both bidders and administrators
+- Ensured transparency and smooth workflow management
+- Technologies: MongoDB, Express.js, React, Node.js
+
+SERVICES OFFERED
+- Frontend Development: Creating visually stunning and highly responsive web applications
+- Full Stack Development: Building dynamic web applications from the ground up
+- API Integration: Integrating third-party APIs including payment gateways and cloud storage
+- SharePoint Solutions: Designing and maintaining efficient intranet sites for organizations
+- Data Analysis: Providing insights through advanced data analysis techniques
+
+EDUCATION
+[Your Education Details]
+
+CERTIFICATIONS
+[Your Certifications]
+
+LANGUAGES
+[Your Languages]
+
+---
+This CV is available for download at: https://github.com/mihretue
