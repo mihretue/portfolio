@@ -67,10 +67,10 @@ export default function Projects() {
   const languages = [
     ...new Set(projects.map((p) => p.language).filter(Boolean)),
   ];
-  const allTopics = [...new Set(projects.flatMap((p) => p.topics))].slice(
-    0,
-    10
-  );
+  // const allTopics = [...new Set(projects.flatMap((p) => p.topics))].slice(
+  //   0,
+  //   10
+  // );
 
   const loadMore = () => {
     setVisibleProjects((prev) => prev + 6);
