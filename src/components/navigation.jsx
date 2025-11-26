@@ -1,134 +1,272 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
 
-  const toggleButton = () => {
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+
+      // Update active section based on scroll position
+      const sections = [
+        "home",
+        "about",
+        "services",
+        "skills",
+        "projects",
+        "contact",
+      ];
+      const current = sections.find((section) => {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          return rect.top <= 100 && rect.bottom >= 100;
+        }
+        return false;
+      });
+
+      if (current) {
+        setActiveSection(current);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  return (
-    <div>
-      <header className="flex border-b py-4 px-4 sm:px-10 bg-white font-[sans-serif] min-h-[70px] tracking-wide relative z-50 sticky top-0">
-        <div className="flex flex-wrap items-center gap-5 w-full">
-          <div
-            style={{ display: isMenuOpen ? "block" : "none" }}
-            className="max-lg:hidden lg:!block max-lg:w-full max-lg:fixed max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-50 max-lg:before:inset-0 max-lg:before:z-50">
-            <button
-              onClick={toggleButton}
-              className="lg:hidden fixed top-2 right-4 z-[100] rounded-full bg-white p-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-4 fill-black"
-                viewBox="0 0 320.591 320.591">
-                <path
-                  d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
-                  data-original="#000000"></path>
-                <path
-                  d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"
-                  data-original="#000000"></path>
-              </svg>
-            </button>
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
 
-            <ul className="lg:flex lg:ml-14 lg:gap-x-5 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50">
-              <li className="mb-6 hidden max-lg:block">
-                <Link to="home" smooth={true} duration={500}>
-                  <img
-                    src="https://readymadeui.com/readymadeui.svg"
-                    alt="logo"
-                    className="w-36"
+  const navItems = [
+    { name: "Home", to: "home" },
+    { name: "About", to: "about" },
+    { name: "Services", to: "services" },
+    { name: "Skills", to: "skills" },
+    { name: "Projects", to: "projects" },
+    { name: "Contact", to: "contact" },
+  ];
+
+  return (
+    <header
+      className={`fixed w-full top-0 z-50 transition-all duration-500 ${
+        isScrolled
+          ? "bg-white/95 backdrop-blur-md shadow-lg py-2"
+          : "bg-transparent py-4"
+      }`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between">
+          {/* Logo */}
+          <Link
+            to="home"
+            smooth={true}
+            duration={500}
+            className="flex items-center space-x-3 cursor-pointer group">
+            <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+              <span className="text-white font-bold text-lg">ME</span>
+            </div>
+            <div
+              className={`font-sans font-bold text-xl transition-colors duration-300 ${
+                isScrolled ? "text-gray-900" : "text-white"
+              }`}>
+              Mihretu
+            </div>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center space-x-1">
+            {navItems.map((item) => (
+              <Link
+                key={item.to}
+                to={item.to}
+                smooth={true}
+                duration={500}
+                spy={true}
+                offset={-70}
+                onSetActive={() => setActiveSection(item.to)}
+                className={`px-4 py-2 rounded-xl font-medium transition-all duration-300 relative group ${
+                  isScrolled
+                    ? "text-gray-700 hover:text-green-600"
+                    : "text-white hover:text-green-300"
+                } ${
+                  activeSection === item.to
+                    ? isScrolled
+                      ? "text-green-600 font-semibold"
+                      : "text-green-300 font-semibold"
+                    : ""
+                }`}>
+                {item.name}
+                {/* Active indicator */}
+                <span
+                  className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-green-500 rounded-full transition-all duration-300 ${
+                    activeSection === item.to
+                      ? "scale-100"
+                      : "scale-0 group-hover:scale-100"
+                  }`}></span>
+
+                {/* Hover background */}
+                <span
+                  className={`absolute inset-0 rounded-xl transition-all duration-300 ${
+                    isScrolled
+                      ? "bg-green-50 group-hover:bg-green-50"
+                      : "bg-white/10 group-hover:bg-white/20"
+                  } ${
+                    activeSection === item.to
+                      ? isScrolled
+                        ? "bg-green-50"
+                        : "bg-white/20"
+                      : "opacity-0 group-hover:opacity-100"
+                  }`}></span>
+              </Link>
+            ))}
+          </nav>
+
+          {/* CTA Button */}
+          <div className="hidden lg:block">
+            <Link
+              to="contact"
+              smooth={true}
+              duration={500}
+              className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 ${
+                isScrolled
+                  ? "bg-green-500 text-white hover:bg-green-600 shadow-lg"
+                  : "bg-white text-gray-800 hover:bg-gray-100 shadow-lg"
+              }`}>
+              Get In Touch
+            </Link>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={toggleMenu}
+            className={`lg:hidden p-3 rounded-xl transition-colors duration-300 ${
+              isScrolled
+                ? "hover:bg-gray-100 text-gray-700"
+                : "hover:bg-white/20 text-white"
+            }`}
+            aria-label="Toggle menu">
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24">
+              {isMenuOpen ? (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              ) : (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              )}
+            </svg>
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        <div
+          className={`lg:hidden fixed inset-0 z-40 transition-all duration-500 ${
+            isMenuOpen
+              ? "opacity-100 visible"
+              : "opacity-0 invisible pointer-events-none"
+          }`}>
+          {/* Backdrop */}
+          <div
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+            onClick={closeMenu}></div>
+
+          {/* Menu Panel */}
+          <div
+            className={`absolute top-0 right-0 w-80 h-full bg-white shadow-2xl transform transition-transform duration-500 ${
+              isMenuOpen ? "translate-x-0" : "translate-x-full"
+            }`}>
+            {/* Header */}
+            <div className="flex items-center justify-between p-6 border-b border-gray-200">
+              <div className="flex items-center space-x-3">
+                <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center">
+                  <span className="text-white font-bold text-lg">ME</span>
+                </div>
+                <div className="font-sans font-bold text-gray-900">Mihretu</div>
+              </div>
+
+              <button
+                onClick={closeMenu}
+                className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                aria-label="Close menu">
+                <svg
+                  className="w-5 h-5 text-gray-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
                   />
-                </Link>
-              </li>
-              <li className="max-lg:border-b max-lg:py-3 px-3">
-                <Link
-                  to="home"
-                  smooth={true}
-                  duration={500}
-                  className="lg:hover:text-[#007bff] text-xl text-decoration-none text-green-500 block font-semibold text-[15px] cursor-pointer">
-                  Home
-                </Link>
-              </li>
-              <li className="max-lg:border-b max-lg:py-3 px-3">
-                <Link
-                  to="about"
-                  smooth={true}
-                  duration={500}
-                  className="lg:hover:text-[#007bff] text-xl text-decoration-none text-green-500 block font-semibold text-[15px] cursor-pointer">
-                  About
-                </Link>
-              </li>
-              <li className="max-lg:border-b max-lg:py-3 px-3">
-                <Link
-                  to="services"
-                  smooth={true}
-                  duration={500}
-                  className="lg:hover:text-[#007bff] text-xl text-decoration-none text-green-500 block font-semibold text-[15px] cursor-pointer">
-                  Services
-                </Link>
-              </li>
-              <li className="max-lg:border-b max-lg:py-3 px-3">
-                <Link
-                  to="skill"
-                  smooth={true}
-                  duration={500}
-                  className="lg:hover:text-[#007bff] text-xl text-decoration-none text-green-500 block font-semibold text-[15px] cursor-pointer">
-                  Skill
-                </Link>
-              </li>
-              <li className="max-lg:border-b max-lg:py-3 px-3">
-                <Link
-                  to="project"
-                  smooth={true}
-                  duration={500}
-                  className="lg:hover:text-[#007bff] text-xl text-decoration-none text-green-500 block font-semibold text-[15px] cursor-pointer">
-                  Project
-                </Link>
-              </li>
-              <li className="max-lg:border-b max-lg:py-3 px-3">
+                </svg>
+              </button>
+            </div>
+
+            {/* Navigation Links */}
+            <nav className="p-6">
+              <ul className="space-y-2">
+                {navItems.map((item) => (
+                  <li key={item.to}>
+                    <Link
+                      to={item.to}
+                      smooth={true}
+                      duration={500}
+                      spy={true}
+                      offset={-70}
+                      onSetActive={() => setActiveSection(item.to)}
+                      onClick={closeMenu}
+                      className={`flex items-center px-4 py-3 rounded-xl font-medium transition-all duration-300 ${
+                        activeSection === item.to
+                          ? "bg-green-50 text-green-600 font-semibold"
+                          : "text-gray-700 hover:bg-gray-50 hover:text-green-600"
+                      }`}>
+                      <span
+                        className={`w-2 h-2 rounded-full mr-3 transition-all duration-300 ${
+                          activeSection === item.to
+                            ? "bg-green-500 scale-125"
+                            : "bg-gray-300"
+                        }`}></span>
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+
+              {/* Mobile CTA */}
+              <div className="mt-8 pt-6 border-t border-gray-200">
                 <Link
                   to="contact"
                   smooth={true}
                   duration={500}
-                  className="lg:hover:text-[#007bff] text-xl text-decoration-none text-green-500 block font-semibold text-[15px] cursor-pointer">
-                  Contact US
+                  onClick={closeMenu}
+                  className="w-full bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold py-3 px-6 rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg text-center block">
+                  Get In Touch
                 </Link>
-              </li>
-            </ul>
-          </div>
-
-          <button onClick={toggleButton} className="lg:hidden ml-auto">
-            <svg
-              className="w-7 h-7"
-              fill="#000"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                fillRule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clipRule="evenodd"></path>
-            </svg>
-          </button>
-
-          <div className="flex lg:ml-auto max-lg:w-full">
-            <div className="flex xl:w-80 max-xl:w-full bg-gray-100 px-6 py-3 rounded outline outline-transparent focus-within:outline-[#007bff] focus-within:bg-transparent">
-              <input
-                type="text"
-                placeholder="Search something..."
-                className="w-full text-sm bg-transparent rounded outline-none pr-2"
-              />
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 192.904 192.904"
-                width="16px"
-                className="cursor-pointer fill-gray-400">
-                <path d="m190.707 180.101-47.078-47.077c11.702-14.072 18.752-32.142 18.752-51.831C162.381 36.423 125.959 0 81.191 0 36.422 0 0 36.423 0 81.193c0 44.767 36.422 81.187 81.191 81.187 19.688 0 37.759-7.049 51.831-18.751l47.079 47.078a7.474 7.474 0 0 0 5.303 2.197 7.498 7.498 0 0 0 5.303-12.803zM15 81.193C15 44.694 44.693 15 81.191 15c36.497 0 66.189 29.694 66.189 66.193 0 36.496-29.692 66.187-66.189 66.187C44.693 147.38 15 117.689 15 81.193z"></path>
-              </svg>
-            </div>
+              </div>
+            </nav>
           </div>
         </div>
-      </header>
-    </div>
+      </div>
+    </header>
   );
 }
