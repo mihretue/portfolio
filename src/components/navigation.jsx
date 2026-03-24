@@ -62,7 +62,7 @@ export default function NavBar() {
           ? "bg-white/95 backdrop-blur-md shadow-lg py-2"
           : "bg-transparent py-4"
       }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="px-4 sm:px-6 lg:px-8 box-border w-full">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link
@@ -70,12 +70,12 @@ export default function NavBar() {
             smooth={true}
             duration={500}
             className="flex items-center space-x-3 cursor-pointer group">
-            <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+            <div className="w-10 h-10 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
               <span className="text-white font-bold text-lg">ME</span>
             </div>
             <div
               className={`font-sans font-bold text-xl transition-colors duration-300 ${
-                isScrolled ? "text-gray-900" : "text-white"
+                isScrolled ? "text-secondary-500" : "text-white"
               }`}>
               Mihretu
             </div>
@@ -94,19 +94,19 @@ export default function NavBar() {
                 onSetActive={() => setActiveSection(item.to)}
                 className={`px-4 py-2 rounded-xl font-medium transition-all duration-300 relative group ${
                   isScrolled
-                    ? "text-gray-700 hover:text-green-600"
-                    : "text-white hover:text-green-300"
+                    ? "text-neutral-800 hover:text-primary-500"
+                    : "text-white hover:text-primary-300"
                 } ${
                   activeSection === item.to
                     ? isScrolled
-                      ? "text-green-600 font-semibold"
-                      : "text-green-300 font-semibold"
+                      ? "text-primary-500 font-bold"
+                      : "text-primary-300 font-bold"
                     : ""
                 }`}>
                 {item.name}
                 {/* Active indicator */}
                 <span
-                  className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-green-500 rounded-full transition-all duration-300 ${
+                  className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-primary-500 rounded-full transition-all duration-300 ${
                     activeSection === item.to
                       ? "scale-100"
                       : "scale-0 group-hover:scale-100"
@@ -114,14 +114,14 @@ export default function NavBar() {
 
                 {/* Hover background */}
                 <span
-                  className={`absolute inset-0 rounded-xl transition-all duration-300 ${
+                  className={`absolute inset-0 rounded-xl transition-all duration-300 -z-10 ${
                     isScrolled
-                      ? "bg-green-50 group-hover:bg-green-50"
+                      ? "bg-primary-50 group-hover:bg-primary-50"
                       : "bg-white/10 group-hover:bg-white/20"
                   } ${
                     activeSection === item.to
                       ? isScrolled
-                        ? "bg-green-50"
+                        ? "bg-primary-50"
                         : "bg-white/20"
                       : "opacity-0 group-hover:opacity-100"
                   }`}></span>
@@ -130,15 +130,15 @@ export default function NavBar() {
           </nav>
 
           {/* CTA Button */}
-          <div className="hidden lg:block">
+          <div className="hidden lg:flex shrink-0">
             <Link
               to="contact"
               smooth={true}
               duration={500}
               className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 ${
                 isScrolled
-                  ? "bg-green-500 text-white hover:bg-green-600 shadow-lg"
-                  : "bg-white text-gray-800 hover:bg-gray-100 shadow-lg"
+                  ? "bg-primary-500 text-white hover:bg-primary-500 shadow-lg"
+                  : "bg-white text-secondary-500 hover:bg-neutral-100 shadow-lg"
               }`}>
               Get In Touch
             </Link>
@@ -149,7 +149,7 @@ export default function NavBar() {
             onClick={toggleMenu}
             className={`lg:hidden p-3 rounded-xl transition-colors duration-300 ${
               isScrolled
-                ? "hover:bg-gray-100 text-gray-700"
+                ? "hover:bg-neutral-100 text-neutral-800"
                 : "hover:bg-white/20 text-white"
             }`}
             aria-label="Toggle menu">
@@ -195,20 +195,20 @@ export default function NavBar() {
               isMenuOpen ? "translate-x-0" : "translate-x-full"
             }`}>
             {/* Header */}
-            <div className="flex items-center justify-between p-6 border-b border-gray-200">
+            <div className="flex items-center justify-between p-6 border-b border-neutral-200">
               <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center">
+                <div className="w-10 h-10 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-xl flex items-center justify-center">
                   <span className="text-white font-bold text-lg">ME</span>
                 </div>
-                <div className="font-sans font-bold text-gray-900">Mihretu</div>
+                <div className="font-sans font-bold text-secondary-500">Mihretu</div>
               </div>
 
               <button
                 onClick={closeMenu}
-                className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                className="p-2 hover:bg-neutral-100 rounded-lg transition-colors"
                 aria-label="Close menu">
                 <svg
-                  className="w-5 h-5 text-gray-600"
+                  className="w-5 h-5 text-neutral-800"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24">
@@ -237,14 +237,14 @@ export default function NavBar() {
                       onClick={closeMenu}
                       className={`flex items-center px-4 py-3 rounded-xl font-medium transition-all duration-300 ${
                         activeSection === item.to
-                          ? "bg-green-50 text-green-600 font-semibold"
-                          : "text-gray-700 hover:bg-gray-50 hover:text-green-600"
+                          ? "bg-primary-50 text-primary-500 font-bold"
+                          : "text-neutral-800 hover:bg-neutral-50 hover:text-primary-500"
                       }`}>
                       <span
                         className={`w-2 h-2 rounded-full mr-3 transition-all duration-300 ${
                           activeSection === item.to
-                            ? "bg-green-500 scale-125"
-                            : "bg-gray-300"
+                            ? "bg-primary-500 scale-125"
+                            : "bg-neutral-300"
                         }`}></span>
                       {item.name}
                     </Link>
@@ -253,13 +253,13 @@ export default function NavBar() {
               </ul>
 
               {/* Mobile CTA */}
-              <div className="mt-8 pt-6 border-t border-gray-200">
+              <div className="mt-8 pt-6 border-t border-neutral-200">
                 <Link
                   to="contact"
                   smooth={true}
                   duration={500}
                   onClick={closeMenu}
-                  className="w-full bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold py-3 px-6 rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg text-center block">
+                  className="w-full bg-gradient-to-r from-primary-500 to-secondary-500 text-white font-semibold py-3  rounded-xl hover:from-primary-500 hover:to-secondary-500 transition-all duration-300 transform hover:scale-105 shadow-lg text-center block">
                   Get In Touch
                 </Link>
               </div>

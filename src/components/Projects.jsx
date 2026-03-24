@@ -12,7 +12,7 @@ export default function Projects() {
     const fetchGitHubProjects = async () => {
       try {
         const response = await fetch(
-          "https://api.github.com/users/mihretue/repos?sort=pushed&per_page=20"
+          "https://api.github.com/users/mihretue/repos?sort=pushed&per_page=20",
         );
 
         if (!response.ok) {
@@ -20,6 +20,7 @@ export default function Projects() {
         }
 
         const data = await response.json();
+        console.log(data);
 
         const formattedProjects = data
           .filter((repo) => !repo.fork)
@@ -57,7 +58,7 @@ export default function Projects() {
     return (
       project.language?.toLowerCase() === filter.toLowerCase() ||
       project.topics.some(
-        (topic) => topic.toLowerCase() === filter.toLowerCase()
+        (topic) => topic.toLowerCase() === filter.toLowerCase(),
       )
     );
   });
@@ -79,28 +80,28 @@ export default function Projects() {
   if (loading) {
     return (
       <Element name="projects" className="section">
-        <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white">
-          <div className="max-w-7xl mx-auto">
+        <div className="py-20  bg-gradient-to-br from-neutral- to-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <div className="inline-flex items-center justify-center mb-4">
-                <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
-                <span className="text-green-600 font-semibold uppercase tracking-wider text-sm">
+                <div className="w-2 h-2 bg-accent-400 rounded-full mr-2"></div>
+                <span className="text-accent-600 font-semibold uppercase tracking-wider text-sm">
                   My Work
                 </span>
-                <div className="w-2 h-2 bg-green-400 rounded-full ml-2"></div>
+                <div className="w-2 h-2 bg-accent-400 rounded-full ml-2"></div>
               </div>
-              <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+              <h2 className="text-4xl sm:text-5xl font-bold text-neutral-900 mb-4">
                 Featured Projects
               </h2>
-              <div className="w-20 h-1 bg-green-500 mx-auto mb-6"></div>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              <div className="w-20 h-1 bg-accent-500 mx-auto mb-6"></div>
+              <p className="text-xl text-neutral-600 w-full mx-auto">
                 Showcasing my most actively developed projects
               </p>
             </div>
             <div className="flex justify-center items-center min-h-[400px]">
               <div className="text-center">
-                <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-green-500 mx-auto mb-4"></div>
-                <p className="text-gray-600">Loading amazing projects...</p>
+                <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-accent-500 mx-auto mb-4"></div>
+                <p className="text-neutral-600">Loading amazing projects...</p>
               </div>
             </div>
           </div>
@@ -112,13 +113,13 @@ export default function Projects() {
   if (error) {
     return (
       <Element name="projects" className="section">
-        <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white">
-          <div className="max-w-7xl mx-auto">
+        <div className="py-20  bg-gradient-to-br from-neutral- to-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+              <h2 className="text-4xl sm:text-5xl font-bold text-neutral-900 mb-4">
                 Featured Projects
               </h2>
-              <div className="bg-red-50 border border-red-200 rounded-2xl p-8 max-w-2xl mx-auto">
+              <div className="bg-red-50 border border-red-200 rounded-2xl p-8 w-full mx-auto">
                 <div className="text-red-500 text-6xl mb-4">⚠️</div>
                 <h3 className="text-xl font-semibold text-red-800 mb-2">
                   Unable to Load Projects
@@ -128,7 +129,7 @@ export default function Projects() {
                   href="https://github.com/mihretue"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-900 transition-colors">
+                  className="inline-flex items-center  py-3 bg-neutral-800 text-white rounded-lg hover:bg-neutral-900 transition-colors">
                   View on GitHub
                   <svg
                     className="w-4 h-4 ml-2"
@@ -151,37 +152,37 @@ export default function Projects() {
 
   return (
     <Element name="projects" className="section">
-      <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto">
+      <div className="py-20  bg-gradient-to-br from-neutral- to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header Section */}
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center mb-4">
-              <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
-              <span className="text-green-600 font-semibold uppercase tracking-wider text-sm">
+              <div className="w-2 h-2 bg-accent-400 rounded-full mr-2"></div>
+              <span className="text-accent-600 font-semibold uppercase tracking-wider text-sm">
                 My Work
               </span>
-              <div className="w-2 h-2 bg-green-400 rounded-full ml-2"></div>
+              <div className="w-2 h-2 bg-accent-400 rounded-full ml-2"></div>
             </div>
-            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl sm:text-5xl font-bold text-neutral-900 mb-4">
               Featured Projects
             </h2>
-            <div className="w-20 h-1 bg-green-500 mx-auto mb-6"></div>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <div className="w-20 h-1 bg-accent-500 mx-auto mb-6"></div>
+            <p className="text-xl text-neutral-600 w-full mx-auto">
               Explore my latest work and open-source contributions
             </p>
           </div>
 
           {/* Filter Buttons */}
-          <div className="flex flex-wrap justify-center gap-3 mb-12">
+          <div className="flex flex-wrap justify-center gap-3 mb-12 max-w-3xl mx-auto align-center">
             <button
               onClick={() => {
                 setFilter("all");
                 setVisibleProjects(6);
               }}
-              className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
+              className={` py-2 px-6 rounded-full text-sm font-semibold transition-all duration-300 ${
                 filter === "all"
-                  ? "bg-green-500 text-white shadow-lg"
-                  : "bg-white text-gray-600 hover:bg-gray-100 shadow"
+                  ? "bg-accent-500 text-white shadow-lg"
+                  : "bg-white text-neutral-600 hover:bg-neutral-100 shadow-card"
               }`}>
               All Projects
             </button>
@@ -190,10 +191,10 @@ export default function Projects() {
                 setFilter("with-demo");
                 setVisibleProjects(6);
               }}
-              className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
+              className={` py-2 px-6 rounded-full text-sm font-semibold transition-all duration-300 ${
                 filter === "with-demo"
-                  ? "bg-blue-500 text-white shadow-lg"
-                  : "bg-white text-gray-600 hover:bg-gray-100 shadow"
+                  ? "bg-accent-500 text-white shadow-lg"
+                  : "bg-white text-neutral-600 hover:bg-neutral-100 shadow-card"
               }`}>
               With Live Demo
             </button>
@@ -204,10 +205,10 @@ export default function Projects() {
                   setFilter(lang);
                   setVisibleProjects(6);
                 }}
-                className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
+                className={` py-2 px-6 rounded-full text-sm font-semibold transition-all duration-300 ${
                   filter === lang
-                    ? "bg-purple-500 text-white shadow-lg"
-                    : "bg-white text-gray-600 hover:bg-gray-100 shadow"
+                    ? "bg-accent-500 text-white shadow-lg"
+                    : "bg-white text-neutral-600 hover:bg-neutral-100 shadow-card"
                 }`}>
                 {lang}
               </button>
@@ -219,9 +220,9 @@ export default function Projects() {
             {displayedProjects.map((project) => (
               <div
                 key={project.id}
-                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden group border border-gray-100 hover:border-green-200">
+                className="bg-white rounded-2xl shadow-card hover:shadow-card-hover transition-all duration-300 overflow-hidden group border border-neutral-100 hover:border-accent-200 transform hover:scale-105">
                 {/* Project Header with Gradient */}
-                <div className="bg-gradient-to-r from-green-500 to-blue-600 p-6 relative overflow-hidden">
+                <div className="bg-gradient-to-r from-primary-500 to-secondary-500 p-6 relative overflow-hidden">
                   <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-300"></div>
                   <div className="relative z-10">
                     <h3 className="text-xl font-bold text-white mb-2 line-clamp-1">
@@ -242,7 +243,7 @@ export default function Projects() {
 
                 {/* Project Body */}
                 <div className="p-6">
-                  <p className="text-gray-700 mb-4 line-clamp-3 leading-relaxed">
+                  <p className="text-neutral-700 mb-4 line-clamp-3 leading-relaxed">
                     {project.description}
                   </p>
 
@@ -252,7 +253,7 @@ export default function Projects() {
                       {project.topics.slice(0, 4).map((topic, index) => (
                         <span
                           key={index}
-                          className="px-2 py-1 bg-gradient-to-r from-green-100 to-blue-100 text-green-700 text-xs rounded-full font-medium">
+                          className=" py-1 bg-accent-100 text-accent-700 text-xs rounded-full font-medium">
                           {topic}
                         </span>
                       ))}
@@ -260,7 +261,7 @@ export default function Projects() {
                   )}
 
                   {/* Project Stats */}
-                  <div className="flex items-center justify-between text-gray-600 text-sm mb-6">
+                  <div className="flex items-center justify-between text-neutral-600 text-sm mb-6">
                     <div className="flex items-center gap-4">
                       <div className="flex items-center gap-1">
                         <svg
@@ -285,7 +286,7 @@ export default function Projects() {
                         <span className="font-semibold">{project.forks}</span>
                       </div>
                     </div>
-                    <div className="text-xs text-gray-500">
+                    <div className="text-xs text-neutral-500">
                       {project.size} KB
                     </div>
                   </div>
@@ -296,7 +297,7 @@ export default function Projects() {
                       href={project.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 px-4 py-3 bg-gray-800 text-white text-center rounded-lg hover:bg-gray-900 transition-all duration-300 font-semibold group/link flex items-center justify-center gap-2">
+                      className="flex-1  py-3 bg-neutral-800 text-white text-center rounded-lg hover:bg-neutral-900 transition-all duration-300 font-semibold group/link flex items-center justify-center gap-2">
                       <svg
                         className="w-4 h-4"
                         fill="currentColor"
@@ -317,7 +318,7 @@ export default function Projects() {
                         }
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-1 px-4 py-3 bg-gradient-to-r from-green-500 to-blue-600 text-white text-center rounded-lg hover:from-green-600 hover:to-blue-700 transition-all duration-300 font-semibold group/link flex items-center justify-center gap-2">
+                        className="flex-1  py-3 bg-gradient-to-r from-primary-500 to-secondary-500 text-white text-center rounded-lg hover:from-primary-600 hover:to-secondary-600 transition-all duration-300 font-semibold group/link flex items-center justify-center gap-2 transform hover:scale-105">
                         <svg
                           className="w-4 h-4"
                           fill="currentColor"
@@ -343,7 +344,7 @@ export default function Projects() {
             {visibleProjects < filteredProjects.length ? (
               <button
                 onClick={loadMore}
-                className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-lg hover:from-green-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+                className=" py-4 px-6 bg-gradient-to-r from-primary-500 to-secondary-500 text-white font-semibold rounded-lg hover:from-primary-600 hover:to-secondary-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
                 Load More Projects ({filteredProjects.length - visibleProjects}{" "}
                 remaining)
               </button>
@@ -352,7 +353,7 @@ export default function Projects() {
                 href="https://github.com/mihretue?tab=repositories"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-8 py-4 bg-gray-800 text-white font-semibold rounded-lg hover:bg-gray-900 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+                className="inline-flex items-center  py-4 bg-neutral-800 text-white font-semibold rounded-lg hover:bg-neutral-900 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
                 View All Projects on GitHub
                 <svg
                   className="w-5 h-5 ml-2"

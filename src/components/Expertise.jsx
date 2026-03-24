@@ -17,7 +17,7 @@ export default function Expertise() {
       description:
         "I specialize in crafting visually stunning and highly responsive web applications using the latest frontend technologies. With expertise in HTML, CSS, React, and Tailwind CSS, I transform Figma designs into seamless digital experiences that work flawlessly across all devices.",
       technologies: ["React", "JavaScript", "Tailwind CSS", "HTML5", "CSS3"],
-      color: "from-blue-500 to-cyan-500",
+      color: "from-primary-500 to-cyan-500",
     },
     {
       icon: Software,
@@ -25,7 +25,7 @@ export default function Expertise() {
       description:
         "As a skilled full-stack developer, I build dynamic web applications from the ground up. Leveraging my knowledge of the MERN stack (MongoDB, Express.js, React, Node.js) and Django, I deliver robust and scalable solutions tailored to your business needs.",
       technologies: ["MERN Stack", "Django", "Python", "MongoDB", "PostgreSQL"],
-      color: "from-green-500 to-emerald-500",
+      color: "from-primary-500 to-secondary-500",
     },
     {
       icon: Api,
@@ -39,7 +39,7 @@ export default function Expertise() {
         "Payment Gateways",
         "Cloud Services",
       ],
-      color: "from-purple-500 to-pink-500",
+      color: "from-primary-500 to-secondary-500",
     },
     {
       icon: Sharepoint,
@@ -81,28 +81,28 @@ export default function Expertise() {
         "Security",
         "Performance",
       ],
-      color: "from-indigo-500 to-blue-500",
+      color: "from-indigo-500 to-primary-500",
     },
   ];
 
   return (
     <Element name="services" className="section">
-      <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto">
+      <div className="py-20  bg-gradient-to-br from-neutral- to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header Section */}
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center mb-4">
-              <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
-              <span className="text-green-600 font-semibold uppercase tracking-wider text-sm">
+              <div className="w-2 h-2 bg-primary-500 rounded-full mr-2"></div>
+              <span className="text-primary-500 font-semibold uppercase tracking-wider text-sm">
                 My Services
               </span>
-              <div className="w-2 h-2 bg-green-400 rounded-full ml-2"></div>
+              <div className="w-2 h-2 bg-primary-500 rounded-full ml-2"></div>
             </div>
-            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4 font-sans">
+            <h2 className="text-4xl sm:text-5xl font-bold text-secondary-500 mb-4 font-sans">
               What I Do
             </h2>
-            <div className="w-20 h-1 bg-green-500 mx-auto mb-6"></div>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            <div className="w-20 h-1 bg-primary-500 mx-auto mb-6"></div>
+            <p className="text-xl text-neutral- w-full mx-auto leading-relaxed">
               Transforming Ideas into Digital Realities with Precision and
               Creativity
             </p>
@@ -113,7 +113,7 @@ export default function Expertise() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className={`group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 ${
+                className={`group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-neutral- ${
                   activeCard === index ? "scale-105 ring-2 ring-green-200" : ""
                 }`}
                 onMouseEnter={() => setActiveCard(index)}
@@ -133,12 +133,12 @@ export default function Expertise() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-gray-800 transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-secondary-500 mb-4 group-hover:text-secondary-500 transition-colors duration-300">
                     {service.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-gray-600 leading-relaxed mb-6 group-hover:text-gray-700 transition-colors duration-300">
+                  <p className="text-neutral- leading-relaxed mb-6 group-hover:text-neutral- transition-colors duration-300">
                     {service.description}
                   </p>
 
@@ -147,7 +147,7 @@ export default function Expertise() {
                     {service.technologies.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="px-3 py-1 bg-gray-100 text-gray-700 text-sm font-medium rounded-full group-hover:bg-gray-200 transition-colors duration-300">
+                        className="px-3 py-1 bg-neutral- text-neutral- text-sm font-medium rounded-full group-hover:bg-neutral- transition-colors duration-300">
                         {tech}
                       </span>
                     ))}
@@ -162,7 +162,7 @@ export default function Expertise() {
 
           {/* Bottom CTA */}
           <div className="text-center mt-16">
-            <div className="bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl p-8 text-white shadow-lg max-w-4xl mx-auto">
+            <div className="bg-gradient-to-r from-primary-500 to-secondary-500 rounded-2xl p-8 text-white shadow-lg w-full mx-auto">
               <h3 className="text-2xl font-bold mb-4">
                 Ready to Start Your Project?
               </h3>
@@ -171,10 +171,10 @@ export default function Expertise() {
                 technology and innovative solutions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-md">
+                <button className="bg-white text-primary-500  py-3 px-6 rounded-lg font-semibold hover:bg-neutral- transition-colors duration-300 shadow-md">
                   Get Free Consultation
                 </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-all duration-300">
+                <button className="border-2 border-white text-white  py-3 px-4 rounded-lg font-semibold hover:bg-white hover:text-primary-500 transition-all duration-300">
                   View My Work
                 </button>
               </div>

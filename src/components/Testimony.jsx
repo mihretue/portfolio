@@ -4,10 +4,10 @@ import { Element } from 'react-scroll'
 export default function Testimony() {
   return (
     <Element name='testimony' className='section'>
-        <div class="mt-32 max-w-7xl mx-auto">
-        <div class="mb-16 max-w-2xl text-center mx-auto">
+        <div class="mt-32 w-full">
+        <div class="mb-16 w-full text-center mx-auto">
           <h2 class="md:text-4xl text-3xl font-semibold md:!leading-[50px] mb-6">What our happy client say</h2>
-          <p class="text-gray-400">Laboris qui Lorem ad tempor ut reprehenderit. Nostrud anim nulla officia ea sit
+          <p class="text-neutral-">Laboris qui Lorem ad tempor ut reprehenderit. Nostrud anim nulla officia ea sit
             deserunt. Eu eu quis anim aute Laboris qui Lorem ad tempor ut reprehenderit.</p>
         </div>
         <div class="grid md:grid-cols-3 gap-12 max-md:justify-center text-center mt-16">
@@ -17,11 +17,11 @@ export default function Testimony() {
                 class="w-24 h-24 rounded-full shadow-xl border-2 border-white" />
               <div class="mt-4">
                 <h4 class="text-base">John Doe</h4>
-                <p class="text-xs text-blue-600 mt-2">CEO, Company</p>
+                <p class="text-xs text-primary-500 mt-2">CEO, Company</p>
               </div>
             </div>
             <div class="mt-6">
-              <p class="text-gray-400">The service was amazing. I never had to wait that long for my food. The staff was
+              <p class="text-neutral-">The service was amazing. I never had to wait that long for my food. The staff was
                 friendly and attentive, and the delivery was impressively prompt.</p>
             </div>
             <div class="flex justify-center space-x-2 mt-4">
@@ -53,11 +53,11 @@ export default function Testimony() {
                 class="w-24 h-24 rounded-full shadow-xl border-2 border-white" />
               <div class="mt-4">
                 <h4 class="text-base">Mark Adair</h4>
-                <p class="text-xs text-blue-600 mt-2">CEO, Company</p>
+                <p class="text-xs text-primary-500 mt-2">CEO, Company</p>
               </div>
             </div>
             <div class="mt-6">
-              <p class="text-gray-400">The service was amazing. I never had to wait that long for my food. The staff was
+              <p class="text-neutral-">The service was amazing. I never had to wait that long for my food. The staff was
                 friendly and attentive, and the delivery was impressively prompt.</p>
             </div>
             <div class="flex justify-center space-x-2 mt-4">
@@ -89,11 +89,11 @@ export default function Testimony() {
                 class="w-24 h-24 rounded-full shadow-xl border-2 border-white" />
               <div class="mt-4">
                 <h4 class="text-base">Simon Konecki</h4>
-                <p class="text-xs text-blue-600 mt-2">CEO, Company</p>
+                <p class="text-xs text-primary-500 mt-2">CEO, Company</p>
               </div>
             </div>
             <div class="mt-6">
-              <p class="text-gray-400">The service was amazing. I never had to wait that long for my food. The staff was
+              <p class="text-neutral-">The service was amazing. I never had to wait that long for my food. The staff was
                 friendly and attentive, and the delivery was impressively prompt.</p>
             </div>
             <div class="flex justify-center space-x-2 mt-4">

@@ -10,16 +10,14 @@ import NavBar from "../components/navigation";
 
 const LandinPage = () => {
   return (
-    <div className="text-gray-100 text-[15px]">
+    <div className="text-neutral- text-[15px]">
       <NavBar />
       <MainSection />
       <About />
-      <div className="px-4 sm:px-10">
-        <Expertise />
-        <SkillSet />
-        <Projects />
-        <Contact />
-      </div>
+      <Expertise />
+      <SkillSet />
+      <Projects />
+      <Contact />
     </div>
   );
 };

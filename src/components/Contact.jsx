@@ -97,31 +97,31 @@ export default function Contact() {
           {/* Header Section */}
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center mb-4">
-              <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
-              <span className="text-green-600 font-semibold uppercase tracking-wider text-sm">
+              <div className="w-2 h-2 bg-accent-400 rounded-full mr-2"></div>
+              <span className="text-accent-600 font-semibold uppercase tracking-wider text-sm">
                 Get In Touch
               </span>
-              <div className="w-2 h-2 bg-green-400 rounded-full ml-2"></div>
+              <div className="w-2 h-2 bg-accent-400 rounded-full ml-2"></div>
             </div>
-            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl sm:text-5xl font-bold text-neutral-900 mb-4">
               Let's Work Together
             </h2>
-            <div className="w-20 h-1 bg-green-500 mx-auto mb-6"></div>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            <div className="w-20 h-1 bg-accent-500 mx-auto mb-6"></div>
+            <p className="text-xl text-neutral-600 w-full mx-auto leading-relaxed">
               I'd love to hear from you! Whether you have a project in mind or
               just want to connect, feel free to reach out. I'm always open to
               discussing new opportunities.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Information */}
             <div className="space-y-8">
               <ContactCard className="p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                <h3 className="text-2xl font-bold text-neutral-900 mb-6">
                   Contact Information
                 </h3>
-                <p className="text-gray-600 mb-8 leading-relaxed">
+                <p className="text-neutral-600 mb-8 leading-relaxed">
                   Feel free to reach out through any of these channels. I
                   typically respond within 24 hours and would be happy to
                   discuss your project requirements.
@@ -132,15 +132,15 @@ export default function Contact() {
                     <a
                       key={index}
                       href={info.link}
-                      className="flex items-center p-4 rounded-2xl bg-gray-50 hover:bg-green-50 transition-all duration-300 group border border-transparent hover:border-green-200">
-                      <div className="flex items-center justify-center w-12 h-12 bg-green-100 rounded-xl text-green-600 text-xl group-hover:scale-110 transition-transform duration-300 mr-4">
+                      className="flex items-center p-4 rounded-2xl bg-neutral-50 hover:bg-accent-50 transition-all duration-300 group border border-transparent hover:border-accent-200">
+                      <div className="flex items-center justify-center w-12 h-12 bg-accent-100 rounded-xl text-accent-600 text-xl group-hover:scale-110 transition-transform duration-300 mr-4">
                         {info.icon}
                       </div>
                       <div>
-                        <div className="font-semibold text-gray-900 group-hover:text-green-700 transition-colors">
+                        <div className="font-semibold text-neutral-900 group-hover:text-accent-700 transition-colors">
                           {info.title}
                         </div>
-                        <div className="text-gray-600 group-hover:text-gray-700">
+                        <div className="text-neutral-600 group-hover:text-neutral-700">
                           {info.value}
                         </div>
                       </div>
@@ -149,8 +149,8 @@ export default function Contact() {
                 </div>
 
                 {/* Social Links */}
-                <div className="mt-8 pt-6 border-t border-gray-200">
-                  <h4 className="font-semibold text-gray-900 mb-4">
+                <div className="mt-8 pt-6 border-t border-neutral-200">
+                  <h4 className="font-semibold text-neutral-900 mb-4">
                     Follow Me
                   </h4>
                   <div className="flex space-x-4">
@@ -176,7 +176,7 @@ export default function Contact() {
                         href={social.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center w-12 h-12 bg-gray-100 rounded-xl hover:bg-green-100 hover:text-green-600 transition-all duration-300 text-lg"
+                        className="flex items-center justify-center w-12 h-12 bg-neutral-100 rounded-xl hover:bg-accent-100 hover:text-accent-600 transition-all duration-300 text-lg"
                         title={social.name}>
                         {social.icon}
                       </a>
@@ -188,13 +188,13 @@ export default function Contact() {
 
             {/* Contact Form */}
             <ContactCard className="p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+              <h3 className="text-2xl font-bold text-neutral-900 mb-6">
                 Send Message
               </h3>
 
               {/* Status Messages */}
               {submitStatus === "success" && (
-                <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-2xl text-green-700 flex items-center">
+                <div className="mb-6 p-4 bg-secondary-50 border border-secondary-200 rounded-2xl text-secondary-700 flex items-center">
                   <span className="text-lg mr-2">✅</span>
                   Message sent successfully! I'll get back to you soon.
                 </div>
@@ -211,7 +211,7 @@ export default function Contact() {
               <form ref={form} onSubmit={onEmailSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label className="text-gray-700 font-semibold text-sm uppercase tracking-wide">
+                    <label className="text-neutral-700 font-semibold text-sm uppercase tracking-wide">
                       Your Name *
                     </label>
                     <input
@@ -219,13 +219,13 @@ export default function Contact() {
                       name="name"
                       required
                       disabled={isSubmitting}
-                      className="w-full border border-gray-300 rounded-2xl p-4 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all duration-300 bg-white disabled:bg-gray-100 disabled:cursor-not-allowed"
+                      className="w-full border border-neutral-300 rounded-2xl p-4 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-accent-500 transition-all duration-300 bg-white disabled:bg-neutral-100 disabled:cursor-not-allowed"
                       placeholder="Enter your name"
                     />
                   </div>
 
                   <div className="space-y-2">
-                    <label className="text-gray-700 font-semibold text-sm uppercase tracking-wide">
+                    <label className="text-neutral-700 font-semibold text-sm uppercase tracking-wide">
                       Email Address *
                     </label>
                     <input
@@ -233,27 +233,27 @@ export default function Contact() {
                       name="email"
                       required
                       disabled={isSubmitting}
-                      className="w-full border border-gray-300 rounded-2xl p-4 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all duration-300 bg-white disabled:bg-gray-100 disabled:cursor-not-allowed"
+                      className="w-full border border-neutral-300 rounded-2xl p-4 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-accent-500 transition-all duration-300 bg-white disabled:bg-neutral-100 disabled:cursor-not-allowed"
                       placeholder="Enter your email"
                     />
                   </div>
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-gray-700 font-semibold text-sm uppercase tracking-wide">
+                  <label className="text-neutral-700 font-semibold text-sm uppercase tracking-wide">
                     Subject
                   </label>
                   <input
                     type="text"
                     name="subject"
                     disabled={isSubmitting}
-                    className="w-full border border-gray-300 rounded-2xl p-4 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all duration-300 bg-white disabled:bg-gray-100 disabled:cursor-not-allowed"
+                    className="w-full border border-neutral-300 rounded-2xl p-4 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-accent-500 transition-all duration-300 bg-white disabled:bg-neutral-100 disabled:cursor-not-allowed"
                     placeholder="What's this about?"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-gray-700 font-semibold text-sm uppercase tracking-wide">
+                  <label className="text-neutral-700 font-semibold text-sm uppercase tracking-wide">
                     Message *
                   </label>
                   <textarea
@@ -261,14 +261,14 @@ export default function Contact() {
                     required
                     disabled={isSubmitting}
                     rows="6"
-                    className="w-full border border-gray-300 rounded-2xl p-4 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all duration-300 bg-white resize-none disabled:bg-gray-100 disabled:cursor-not-allowed"
+                    className="w-full border border-neutral-300 rounded-2xl p-4 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-accent-500 transition-all duration-300 bg-white resize-none disabled:bg-neutral-100 disabled:cursor-not-allowed"
                     placeholder="Tell me about your project or inquiry..."></textarea>
                 </div>
 
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold py-4 px-8 rounded-2xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none shadow-lg hover:shadow-xl flex items-center justify-center">
+                  className="w-full bg-gradient-to-r from-primary-500 to-secondary-500 text-white font-semibold py-4  rounded-2xl hover:from-primary-600 hover:to-secondary-600 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none shadow-lg hover:shadow-xl flex items-center justify-center">
                   {isSubmitting ? (
                     <>
                       <div className="animate-spin rounded-full h-5 w-5 border-t-2 border-b-2 border-white mr-2"></div>
@@ -298,10 +298,10 @@ export default function Contact() {
 
           {/* Bottom CTA */}
           <div className="text-center mt-16">
-            <p className="text-gray-600 mb-4">Prefer a more direct approach?</p>
+            <p className="text-neutral-600 mb-4">Prefer a more direct approach?</p>
             <a
               href="mailto:mihretuendeshaw84@gmail.com"
-              className="inline-flex items-center px-8 py-4 border-2 border-green-500 text-green-600 font-semibold rounded-2xl hover:bg-green-500 hover:text-white transition-all duration-300">
+              className="inline-flex items-center px-8 py-4 border-2 border-accent-500 text-accent-600 font-semibold rounded-2xl hover:bg-accent-500 hover:text-white transition-all duration-300">
               📧 Email Me Directly
             </a>
           </div>
