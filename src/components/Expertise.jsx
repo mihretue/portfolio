@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Api from "../Image/svg/api-svgrepo-com.svg";
 import Commerce from "../Image/svg/commerce-and-shopping-ecommerce-svgrepo-com.svg";
 import DataAnalysis from "../Image/svg/data-analysis-svgrepo-com.svg";
-import Sharepoint from "../Image/svg/ms-sharepoint-svgrepo-com.svg";
 import UI from "../Image/svg/ui-states-svgrepo-com.svg";
 import Software from "../Image/svg/software-svgrepo-com.svg";
 import { Element } from "react-scroll";
@@ -40,20 +39,6 @@ export default function Expertise() {
         "Cloud Services",
       ],
       color: "from-primary-500 to-secondary-500",
-    },
-    {
-      icon: Sharepoint,
-      title: "SharePoint Solutions",
-      description:
-        "With hands-on experience in SharePoint, I design and maintain efficient intranet sites for organizations, including government projects. My services include custom SharePoint site design, InfoPath form creation, and seamless integration with existing systems.",
-      technologies: [
-        "SharePoint",
-        "SPFx",
-        "Power Automate",
-        "InfoPath",
-        "Office 365",
-      ],
-      color: "from-orange-500 to-amber-500",
     },
     {
       icon: DataAnalysis,

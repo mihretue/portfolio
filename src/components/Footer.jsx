@@ -19,7 +19,6 @@ export default function Footer() {
     "Frontend Development",
     "Full Stack Solutions",
     "API Integration",
-    "SharePoint Development",
     "Data Analysis",
   ];
 
