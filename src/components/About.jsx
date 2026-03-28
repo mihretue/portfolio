@@ -14,7 +14,7 @@ export default function About() {
     { category: "Database", items: ["MongoDB", "PostgreSQL", "MySQL"] },
     {
       category: "Tools & Other",
-      items: ["SharePoint", "SPFx", "OCR", "Automation", "Figma"],
+      items: ["Docker", "AWS", "OCR", "Automation", "Figma"],
     },
   ];
 
@@ -91,14 +91,13 @@ export default function About() {
                   <p>
                     I have hands-on experience with{" "}
                     <span className="text-accent-600 font-semibold">
-                      SharePoint integrations
+                      Enterprise integrations
                     </span>
-                    , PDF automation, LibreOffice conversions, SPFx,
+                    , PDF automation, LibreOffice conversions,
                     file-processing pipelines, scalable workflows, and
-                    role-based automation — including enterprise systems like
-                    SmartOffice, where I engineered file conversion, dynamic
-                    sealing, performance optimization, and multi-site user role
-                    automation.
+                    role-based automation — engineering robust systems that handle 
+                    file conversion, dynamic sealing, performance optimization, 
+                    and multi-site user role automation.
                   </p>
 
                   <p className="font-semibold text-neutral-900 border-l-4 border-accent-500 pl-4 bg-accent-50 py-3 rounded-r-lg">
